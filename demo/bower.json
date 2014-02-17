@@ -1,0 +1,16 @@
+{
+  "name": "demo",
+  "version": "0.0.0",
+  "authors": [
+    "Maciej Żuk <mzuk@milosolutions.com>"
+  ],
+  "description": "angular timeline demo",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

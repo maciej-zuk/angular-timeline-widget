@@ -1,0 +1,107 @@
+.timeline{
+    width: 100%;
+    position: relative;
+    border-left: 1px solid #aaa;
+    border-right: 1px solid #aaa;
+}
+
+.timeline .overlay{
+    position: relative;
+    width: 100%;
+    user-select: none;
+    -o-user-select:none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    cursor: move;
+    overflow: hidden;
+    z-index: 5;
+}
+
+.timeline .user-row{
+    border-top: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+}
+
+.timeline .user-label{
+    padding: 10px;
+    z-index: 10;
+}
+
+.timeline span.label-inner{
+    background: rgba(255, 255, 255, 0.5);
+    padding: 5px;
+}
+
+
+.timeline .user-row:nth-child(even){
+    background: rgba(200, 200, 200, 0.25);
+}
+.timeline .user-row:nth-child(odd){
+    background: rgba(200, 200, 200, 0.25);
+}
+
+
+
+.timeline .user-row .project-row{
+    padding: 10px;
+    position: relative;
+}
+
+.timeline .project-label{
+    position: relative;
+    padding: 10px;
+    z-index: 10;
+    width: 200px;
+}
+
+.timeline .user-row .project-row:nth-child(even){
+    background: rgba(200, 255, 200, 0.25);
+}
+.timeline .user-row .project-row:nth-child(odd){
+    background: rgba(200, 200, 255, 0.25);
+}
+
+
+.timeline .event-block {
+    background: rgba(255, 100, 100, 0.5);
+    position: absolute;
+    z-index: 5;
+    min-width: 1px;
+    overflow: hidden;
+    white-space: nowrap;
+    line-height: 40px;
+    border-radius: 10px 0;
+    text-align: left;
+    cursor: pointer;
+    padding-left: 10px;
+}
+
+.timeline .event-block:hover {
+    min-width: 400px;
+}
+
+.timeline .event-block .details{
+    visibility: hidden;
+    display: none;
+}
+
+
+.timeline .event-block:hover .details{
+    margin-left: 20px;
+    visibility: visible;
+    display: inline;
+}
+
+.timeline canvas{
+    border-bottom: 1px solid #aaa;
+    background: #fefefe;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.timeline .spacer{
+    height: 40px;
+}
