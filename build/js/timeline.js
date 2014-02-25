@@ -149,6 +149,9 @@ angular.module('timeline', [])
           setTimeout(onResize, 10);
 
           iElement.bind('mousewheel wheel', function (e) {
+            if (e.originalEvent !== undefined){
+              e = e.originalEvent;
+            }
             var delta = e.wheelDelta || e.deltaY;
             if (delta > 0) {
               if (scope.scale < 0.5) {
