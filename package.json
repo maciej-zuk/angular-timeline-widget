@@ -1,6 +1,6 @@
 {
   "name": "angular-timeline",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "devDependencies": {
     "grunt": "~0.4.2",
     "grunt-angular-templates": "~0.5.3",

@@ -121,6 +121,9 @@ angular.module('timeline', [])
           $scope.basicInterval = 60 * 60 * 1000.0;
 
           $scope.$watchCollection($scope.timeline, function () {
+            if(angular.isUndefined($scope.timeline) || angular.isUndefined($scope.timeline.entries)){
+              return;
+            }
             validateTimelineData($scope.timeline);
             findUniqueAttributeList($scope.timeline, 'tags', $scope.internal.uniqueTags);
             findUniqueAttributeList($scope.timeline, 'users', $scope.internal.users);
@@ -197,6 +200,9 @@ angular.module('timeline', [])
           };
 
           scope.redrawCanvas = function () {
+            if(angular.isUndefined($scope.internal.events) || angular.isUndefined($scope.internal.events.minDate)){
+              return;
+            }
             scope.canvasCtx.clearRect(0, 0, scope.canvasWidth, scope.canvasHeight);
 
             // change scale resolution depeding on zoom
