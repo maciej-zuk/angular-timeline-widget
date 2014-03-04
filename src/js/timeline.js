@@ -76,6 +76,9 @@ angular.module('timeline', [])
             minDate = eventDate;
           }
         });
+        if(minDate === null){
+          return {};
+        }
         var minOffset = minDate.getTime();
         angular.forEach(timeline.entries, function (entry) {
           var eventDate = new Date(entry.datetime);
@@ -200,7 +203,7 @@ angular.module('timeline', [])
           };
 
           scope.redrawCanvas = function () {
-            if(angular.isUndefined($scope.internal.events) || angular.isUndefined($scope.internal.events.minDate)){
+            if(angular.isUndefined(scope.internal.events) || angular.isUndefined(scope.internal.events.minDate)){
               return;
             }
             scope.canvasCtx.clearRect(0, 0, scope.canvasWidth, scope.canvasHeight);
